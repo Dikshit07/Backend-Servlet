@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: 30px;
+        }
+
+       
+
+        .add_Books form {
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid green; */
+
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .add_Books
+        {
+            display:flex ;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="add_Books">
+
+            <form action="/my-servlet" method="get">
+                <div class="input">Book Name <input type="text" name="name" required>
+                Book ISBN <input type="text" name="isbn" required></div>
+                
+                <div class="button">
+                <button type="submit">Add Books</button></div>
+
+
+            </form>
+        </div>
+        <div class="add_Books" >
+
+            <form action="/delete-book" method="post">
+                <div class="input">                Enter Book ISBN <input type="text" name="isbn" required>
+</div>
+                <div class="button">
+                    <button type="submit">Delete Books</button></div>
+
+
+            </form>
+        </div>
+        <div class="add_Books">
+
+            <form action="/update-book" method="post">
+                <div class="input">Enter new Book Name <input type="text" name="name">
+                Enter Book ISBN <input type="text" name="isbn"></div>
+                
+                <div class="button">
+                    <button type="submit">Update Books</button></div>
+
+
+
+            </form>
+
+        </div>
+        <div class="add_Books">
+
+            <form action="/fetch-books">
+
+                <button type="submit">Show Registered Books</button>
+
+
+            </form>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>
